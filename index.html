@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>আদর্শ হিন্দু জনকল্যাণ সমিতি</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+--primary: #c2410c;
+--secondary: #ea580c;
+--accent: #f97316;
+--bg: #fffbeb;
+--card-bg: #ffffff;
+--text: #292524;
+--muted: #57534e;
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Hind Siliguri', sans-serif;
+}
+
+body {
+background-color: var(--bg);
+color: var(--text);
+line-height: 1.6;
+}
+
+/* হেডার ও লোগো সেকশন */
+header {
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+color: white;
+text-align: center;
+padding: 30px 20px 25px;
+}
+
+.logo-container {
+margin-bottom: 12px;
+}
+
+.org-logo {
+width: 110px;
+height: 110px;
+object-fit: cover;
+border-radius: 50%;
+border: 3px solid #ffffff;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+background-color: #fff;
+}
+
+header h1 {
+font-size: 2.2rem;
+margin-bottom: 6px;
+}
+
+header p {
+font-size: 1.15rem;
+max-width: 700px;
+margin: 0 auto;
+opacity: 0.95;
+}
+
+/* মেনু বার */
+nav {
+background-color: #9a3412;
+display: flex;
+justify-content: center;
+gap: 20px;
+padding: 12px;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+font-weight: 600;
+font-size: 1rem;
+transition: color 0.2s;
+}
+
+nav a:hover {
+color: #fed7aa;
+}
+
+/* ব্যানার সেকশন */
+.banner-section {
+width: 100%;
+max-width: 1100px;
+margin: 25px auto 0;
+padding: 0 20px;
+}
+
+.banner-img {
+width: 100%;
+max-height: 420px;
+object-fit: cover;
+border-radius: 12px;
+box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+display: block;
+}
+
+.container {
+max-width: 1100px;
+margin: 40px auto;
+padding: 0 20px;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.section-title h2 {
+font-size: 1.8rem;
+color: var(--primary);
+position: relative;
+display: inline-block;
+padding-bottom: 8px;
+}
+
+.section-title h2::after {
+content: '';
+position: absolute;
+width: 50%;
+height: 3px;
+background: var(--accent);
+bottom: 0;
+left: 25%;
+border-radius: 2px;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 24px;
+margin-bottom: 50px;
+}
+
+.card {
+background: var(--card-bg);
+border-radius: 12px;
+padding: 24px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+border-top: 4px solid var(--accent);
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.shloka {
+font-style: italic;
+color: var(--primary);
+font-weight: 600;
+margin-bottom: 8px;
+font-size: 1.05rem;
+}
+
+.meaning {
+color: var(--muted);
+font-size: 0.95rem;
+}
+
+.course-badge {
+display: inline-block;
+background: #ffedd5;
+color: var(--primary);
+padding: 4px 10px;
+border-radius: 20px;
+font-size: 0.85rem;
+font-weight: 600;
+margin-bottom: 12px;
+}
+
+.btn {
+display: inline-block;
+margin-top: 14px;
+background: var(--primary);
+color: white;
+text-decoration: none;
+padding: 8px 16px;
+border-radius: 6px;
+font-size: 0.9rem;
+font-weight: 600;
+transition: background 0.2s;
+}
+
+.btn:hover {
+background: var(--secondary);
+}
+
+.service-banner {
+background: linear-gradient(rgba(194, 65, 12, 0.9), rgba(194, 65, 12, 0.9)), url('banner.jpg') center/cover;
+color: white;
+padding: 40px;
+border-radius: 12px;
+text-align: center;
+margin-bottom: 50px;
+}
+
+.service-banner h3 {
+font-size: 1.6rem;
+margin-bottom: 12px;
+}
+
+footer {
+background-color: #1c1917;
+color: #a8a29e;
+text-align: center;
+padding: 30px 20px;
+font-size: 0.9rem;
+}
+
+footer p {
+margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+header h1 {
+font-size: 1.8rem;
+}
+.org-logo {
+width: 85px;
+height: 85px;
+}
+.banner-img {
+max-height: 240px;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- লোগো সহ হেডার -->
+<header>
+<div class="logo-container">
+<!-- লোগোর ফাইল নাম এখানে 'logo.png' রাখা আছে -->
+<img src="logo.png" alt="আদর্শ হিন্দু জনকল্যাণ সমিতি লোগো" class="org-logo">
+</div>
+<h1>আদর্শ হিন্দু জনকল্যাণ সমিতি</h1>
+<p>ধর্ম, নীতিশিক্ষা ও নিঃস্বার্থ মানবসেবায় ঐক্যবদ্ধ সমাজ গঠনে নিবেদিত</p>
+</header>
+
+<nav>
+<a href="#gita">গীতার বাণী</a>
+<a href="#courses">কোর্স ও শিক্ষা</a>
+<a href="#service">বিপদে পাশে থাকা</a>
+<a href="#contact">যোগাযোগ</a>
+</nav>
+
+<!-- ব্যানার সেকশন -->
+<div class="banner-section">
+<!-- ব্যানারের ফাইল নাম এখানে 'banner.jpg' রাখা আছে -->
+<img src="banner.jpg" alt="আদর্শ হিন্দু জনকল্যাণ সমিতি ব্যানার" class="banner-img">
+</div>
+
+<div class="container">
+
+<!-- গীতাবাণী সেকশন -->
+<section id="gita">
+<div class="section-title">
+<h2>শ্রীমদ্ভগবদ্গীতা থেকে আদর্শ শিক্ষা</h2>
+</div>
+<div class="grid">
+<div class="card">
+<div class="shloka">"কর্মণ্যেवाधिकारস্তে মা ফলেষু কদাচন..." (২/৪৭)</div>
+<p class="meaning"><strong>বঙ্গানুবাদ:</strong> কর্মেই তোমার অধিকার, ফলের ওপর কখনো নয়। ফলের লোভ ত্যাগ করে নিঃস্বার্থভাবে সামাজিক ও ধর্মীয় দায়িত্ব পালন করাই আদর্শ মানবের লক্ষণ।</p>
+</div>
+<div class="card">
+<div class="shloka">"পরিত্রাণায় সাধূনাং বিনাশায় চ দুষ্কৃতাম্..." (৪/৮)</div>
+<p class="meaning"><strong>বঙ্গানুবাদ:</strong> সৎ মানুষের রক্ষা ও অন্যায়ের বিনাশ ঘটিয়ে সমাজে ধর্ম ও ন্যায়ের প্রতিষ্ঠা করাই প্রতিটি আদর্শ মানবের নৈতিক লক্ষ্য।</p>
+</div>
+<div class="card">
+<div class="shloka">"আত্মৌপম্যেন সর্বত্র সমং পশ্যতি যোঽর্জুন..." (৬/৩২)</div>
+<p class="meaning"><strong>বঙ্গানুবাদ:</strong> যিনি অপরের সুখ এবং দুঃখকে নিজের সুখ-দুঃখের মতো সমানুভূতি দিয়ে বিচার করেন, তিনিই শ্রেষ্ঠ যোগী ও প্রকৃত সমাজসেবক।</p>
+</div>
+</div>
+</section>
+
+<!-- বিপদে পাশে দাঁড়ানোর সেকশন -->
+<section id="service" class="service-banner">
+<h3>একে অন্যের বিপদে পাশে দাঁড়ানোই পরম ধর্ম</h3>
+<p style="max-width: 800px; margin: 0 auto 20px;">
+সনাতন ধর্মের মূল ভিত্তি হলো <em>"জীব সেবা-ই শিব সেবা"</em>। যেকোনো পরিবার চিকিৎসার অভাবে ভুগলে, সামাজিক বা আর্থিক সংকটে পড়লে আমাদের সমিতির পক্ষ থেকে পাশে দাঁড়ানো হয়।
+</p>
+<a href="#contact" class="btn" style="background: white; color: var(--primary);">সাহায্যের জন্য যোগাযোগ করুন</a>
+</section>
+
+<!-- কোর্স সেকশন -->
+<section id="courses">
+<div class="section-title">
+<h2>আমাদের আদর্শ শিক্ষা ও জনকল্যাণ কোর্স</h2>
+</div>
+<div class="grid">
+<div class="card">
+<span class="course-badge">অনলাইন ও অফলাইন</span>
+<h3>গীতা ও আদর্শ জীবন দর্শন</h3>
+<p class="meaning" style="margin-top: 10px;">দৈনন্দিন মানসিক অশান্তি দূর করা, সঠিক সিদ্ধান্ত নেওয়া এবং গীতার শ্লোক ও দর্শনের মাধ্যমে চরিত্র গঠনের সহজ পাঠ।</p>
+<a href="#contact" class="btn">বিস্তারিত জানুন</a>
+</div>
+<div class="card">
+<span class="course-badge">যুব সমাজ</span>
+<h3>সনাতন ঐতিহ্য ও মূল্যবোধ</h3>
+<p class="meaning" style="margin-top: 10px;">তরুণ প্রজন্মকে সঠিক আদর্শ, ইতিহাস, শৃঙ্খলা, সেবাভাব ও সমাজের প্রতি দায়িত্বশীল করে তোলার প্রশিক্ষণ।</p>
+<a href="#contact" class="btn">বিস্তারিত জানুন</a>
+</div>
+<div class="card">
+<span class="course-badge">সমাজসেবা</span>
+<h3>দুর্যোগ ব্যবস্থাপনা ও জনকল্যাণ সেবা</h3>
+<p class="meaning" style="margin-top: 10px;">বিপদে কীভাবে সাধারণ মানুষের পাশে দাঁড়াতে হয়, রক্তদান সহায়তা ও জরুরি ত্রাণ কার্যক্রমে স্বেচ্ছাসেবকদের ভূমিকা।</p>
+<a href="#contact" class="btn">বিস্তারিত জানুন</a>
+</div>
+</div>
+</section>
+
+<!-- যোগাযোগ সেকশন -->
+<section id="contact">
+<div class="section-title">
+<h2>যুক্ত হোন আমাদের সাথে</h2>
+</div>
+<div class="card" style="text-align: center; max-width: 600px; margin: 0 auto;">
+<p style="margin-bottom: 12px;">আমাদের ফেসবুক পেজ ও জনকল্যাণ কার্যক্রমে যুক্ত হয়ে সমাজের পাশে দাঁড়ান।</p>
+<p><strong>ফেসবুক পেজ:</strong> আদর্শ হিন্দু জনকল্যাণ সমিতি</p>
+<p><strong>মোবাইল / হোয়াটসঅ্যাপ:</strong> [আপনার ফোন নম্বর দিন]</p>
+<p><strong>স্থান:</strong> পশ্চিমবঙ্গ, ভারত</p>
+<a href="#" class="btn" style="margin-top: 15px;">ফেসবুক পেজে মেসেজ করুন</a>
+</div>
+</section>
+
+</div>
+
+<footer>
+<p>© আদর্শ হিন্দু জনকল্যাণ সমিতি — সর্বস্বত্ব সংরক্ষিত।</p>
+<p>ধর্ম রক্ষতি রক্ষিতঃ | জীবের কল্যাণে সদা জাগ্রত</p>
+</footer>
+
+</body>
+</html>
